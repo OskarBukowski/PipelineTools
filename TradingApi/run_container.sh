@@ -12,7 +12,7 @@ docker run -d "$CONTAINER_NAME"
 
 RUNNING_AFTER=$(docker info | grep "Running:" | cut -f' ' -f4)
 
-if [ $RUNNING_AFTER = $RUNNING_BEFORE ]; then
+if [ $RUNNING_AFTER != $RUNNING_BEFORE ]; then
   echo "$2: Unable to run container at $(now)" >> errors.txt
 
 fi
