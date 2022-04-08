@@ -3,6 +3,7 @@
 # $1 --> VERSION
 # $2 --> BUILD NUMBER
 
+sudo su
 
 RUNNING_BEFORE=$(docker info | grep "Running:" | cut -d' ' -f4)
 CONTAINER_NAME="api:$1"
